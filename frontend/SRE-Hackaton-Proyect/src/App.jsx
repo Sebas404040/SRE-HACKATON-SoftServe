@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="sre-container">
       <Header />
-      
+
       <div className="main-content">
         <ResultAlert error={error} result={result} />
       </div>

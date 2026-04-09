@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import submitIncident  from '../services/incidentService.js';
 import './IncidentForm.css';
 
 export const IncidentForm = ({ onResult, onError, onLoading }) => {
@@ -24,9 +24,8 @@ export const IncidentForm = ({ onResult, onError, onLoading }) => {
     if (file) formData.append('evidence', file);
 
     try {
-      const response = await axios.post('http://localhost:3001/api/incidents', formData);
-      onResult(response.data);
-      // Limpiar formulario tras éxito (opcional)
+      const data = await submitIncident(formData);
+      onResult(data);
       setDescription('');
       setFile(null);
     } catch (err) {
