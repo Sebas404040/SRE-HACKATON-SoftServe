@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Orbitron-Bold';
+    src: url("../../fonts/orbitron-bold.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header-container {
+  width: 100%;
+  background-color: #000000;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #27272a;
+}
+
+.header-title {
+  font-family: 'Orbitron-Bold';
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.header-subtitle { display: none; }
