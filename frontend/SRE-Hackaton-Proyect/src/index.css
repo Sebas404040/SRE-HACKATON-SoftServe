@@ -1,0 +1,44 @@
+:root {
+  --bg-main: #18181b; /* El gris oscuro del fondo de tu boceto */
+  --header-bg: #000000; /* El header totalmente negro */
+  --text-main: #f4f4f5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden; /* Evita el scroll de toda la página */
+}
+
+#root { height: 100%; }
+
+/* El nuevo layout a pantalla completa */
+.sre-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Área donde aparecerán las alertas/respuestas */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* El contenedor que fija el input abajo */
+.bottom-input-container {
+  width: 100%;
+  padding: 1.5rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, transparent, var(--bg-main) 15%);
+}
